@@ -100,7 +100,7 @@ wireguard_install(){
     s2=$(cat spublickey)
     c1=$(cat cprivatekey)
     c2=$(cat cpublickey)
-    serverip=$(curl ipv4.icanhazip.com)
+    serverip=$(curl https://ddnsip.cn)
     port=$(rand 10000 60000)
     eth=$(ls /sys/class/net | grep e | head -1)
     chmod 777 -R /etc/wireguard
